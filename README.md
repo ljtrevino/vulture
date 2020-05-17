@@ -1,4 +1,4 @@
-# vulture_app
+# vulture
 Vulture is a site for the MIT community to post and find free food.
 
 
