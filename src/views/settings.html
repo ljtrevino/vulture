@@ -1,0 +1,99 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <title>Settings</title>
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="entirenavbar">
+  
+<div class="navbar-brand brandlogo" href="#">
+
+  <img id="logo" src="https://image.ibb.co/czQsj6/Vulture_Logo.png" width="70" class="d-inline-block align-top" alt="" style="padding-top: 8px">
+  <span id="Vulture">Vulture</span>
+
+</div>
+
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+  <div class="navbar-nav" id="nav-item-container">
+    <!-- navbar items are inserted here -->
+  </div>
+</div>
+</nav>
+
+
+    <div class="containercenter"><!--everything below nav-->  
+    <h3>Settings</h3>
+    <!-- form -->
+    <form action="/api/findfood" method="post">
+    
+    <div class="form-group row">
+      <div class="col-sm-3">Notifications</div>
+      <div class="col-sm-9">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Receive notifications
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-3">Preference by location</div>
+      <div class="col-sm-9">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            .25 miles
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-9">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            .5 miles
+          </label>
+        </div>
+      </div>
+    </div>
+
+        <!--CHANGE THIS TO ACTUAL URL-->
+        <button onclick="location.href = 'http://localhost:3000';" type="submit" class="btn btn-submit btn-block" id="submit-button">Submit</button>
+      
+    </form>
+    </div><!--closing div for container (everything below nav)-->   
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/navbar.js"></script>
+    <script src="/static/js/home.js"></script>
+    <script src="/static/js/feed.js"></script>
+    <script src="/static/js/index.js"></script>
+
+  </body>
+
+</html>

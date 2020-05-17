@@ -1,0 +1,156 @@
+<!Doctype html>
+<html lang="en">
+
+  <head>
+    <!-- <meta http-equiv="refresh" content="5">. -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/QOLH6xfPsFzIaOVW8-Ds_Y8GdxlMqJZuV05BIBuOmynFp13Ja_tKZc3N5VNEq7dcMQOW2uWZ4hHpGQkfWCLmvaqFST15niDJBUGimCiv8jOEjOh_WBMwbI2592AlWWeRi5XZOHhb1V0KHZJJjB1j2KMHCOwFjpnzcaBJkOP6rdNWcroeXG4eP_I5xDRsrb0rtF6FCPhSR43dyx_KQo5_7JgCFHXVe9Y8nU93hS6JE6OYnxWsIxD4i6az_bGvbpGMlqBq0KlTE7AKcAjHvosnyfiObuvNfxf33dHPFLS8-cCVT_xS66v3AEQuDYvISSgMPVH0cPpH4NY8cH3vy0Q4Hqe-MR-O97QKtrmZSy8BQ6vFD8Pdphy7EkldccE2kmjgwVjW2F6bymM3BZ7GuZ6DFgJjFAvEaUIlcplxFH8U0DOVXroxaT6GnYRCHXrP-zSDUloepNxzZIH3tjjnloMVt3HddhMOGGbhR9ruyOAP6KFVlpUcV8bHxOup6Bt9F8qNfGZyiA3FlIRb3BXc_Edwrxt3zDhXmy38Wp-zmUqeRRI_UK-6-2qsE0WSLr99z-hDdDWkN7dLKvny9hA870lmOf-M6Rz6vH0ooAwhBXk=w1187-h718-no " />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <title>Vulture</title>
+
+  </head>
+  <body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="entirenavbar">
+  
+<div class="navbar-brand brandlogo" href="#">
+
+  <img id="logo" src="https://image.ibb.co/czQsj6/Vulture_Logo.png" width="70" class="d-inline-block align-top" alt="" style="padding-top: 8px">
+  <span id="Vulture">Vulture</span>
+
+</div>
+
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+  <div class="navbar-nav" id="nav-item-container">
+    <!-- navbar items are inserted here -->
+  </div>
+</div>
+</nav>
+
+
+
+
+
+
+
+<div class="container"> <!--everything below nav-->
+    <div class="row"> <!--map and others -->
+      <div class="col-lg-6"> <!--left side-->
+          
+
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">              
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <img src="" class="imagepreview" style="width: 100%;" >
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="row"> <!--Selected food card-->
+            <div class="col-lg-12">
+              <div class="card">
+                  <div class="card-header text-center" id="currentcardtitle">Click an icon on the map or a row on the table for more information</div>
+                  <div class="card-body">
+                       
+                      <div style="float: right">
+                      <div class="imagge">
+                        <a href="#" class="pop">
+                              <img class='rounded' style="margin-bottom:10px" id="foodphotooncard" src="https://s3.amazonaws.com/vulture-food-photos/defaultvulture.png"/>
+                        </a>
+                        </div>
+
+                    <button href="/report" id="reportBtn"  class="btn btn-outline-danger">Report if it's gone</button>
+                  </div>
+                  <p class="card-text currentcard-text" id="current-quantity">• <strong>Sort the table</strong> by type or time by clicking on the column title</p>
+                      <p class="card-text currentcard-text" id="current-vendor">• The <strong>Show My Location button</strong> updates your location</p>
+                      <p class="card-text currentcard-text" id="current-notes"> • If a food is all gone, click the <strong>Report button</strong>!</p>
+                      <p class="card-text currentcard-text" id="current-distance">• <strong>Distance</strong> will be added here when location is available</p>
+                      
+                </div>
+                 <div class="card-footer text-muted" id="current-time"></div>
+              </div>
+            </div>
+           </div>
+
+
+          <div class="row table-responsive"> <!--list-->
+            
+<table id="foodTable" class="table table-striped table-bordered pointer" cellspacing="0" width="100%" >
+        <thead>
+            <tr id="head-row">
+                <th id="th-type">Type</th>
+                <th id="th-building" style="cursor: default">Building</th>
+                <th id="th-room" style="cursor: default">Room</th>
+                <th id="th-quantity" style="cursor: default">Quantity</th>
+                <th id="th-vendor" style="cursor: default">Vendor</th>
+                <th id="th-time">Time</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!--add elements from db with feed.js here-->
+        </tbody>
+    </table>
+
+           
+          </div><!--close list-->
+        
+        
+        
+      </div><!--closing left side-->
+        <div class="col-lg-6"> <!--right half (map)-->
+        
+          <button type="button" onclick="geoFindMe()" class="btn btn-outline-success btn-block" id="location-button">Show my Location</button>
+            <div id="map"></div>
+            <div id="app"></div>
+        </div>
+
+      </div><!--closing row for map and others -->
+</div><!--closing div for container (everything below nav)-->         
+
+
+       
+
+
+    
+<!-- Replace the value of the key parameter with your own API key. -->
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytLTaGs8IFm7iAOteYzHCKZ1KF_kjbeA&callback=initMap"
+    async defer></script> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/navbar.js"></script>
+    <!-- SWITCHET THE HOME AND FEED ROWS -->
+    <script src="/static/js/home.js"></script>
+    <script src="/static/js/feed.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytLTaGs8IFm7iAOteYzHCKZ1KF_kjbeA&callback=initMap"
+    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytLTaGs8IFm7iAOteYzHCKZ1KF_kjbeA&libraries=geometry"></script>
+    <script src="/static/js/index.js"></script>
+  <!-- <script src="/static/js/profile.js"></script> -->
+  </body>
+</html>

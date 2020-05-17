@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+
+body{
+  overflow-x:hidden;
+  color:#FFF;
+  font-family: 'Bree Serif', serif;
+  font-size:200%;
+}
+
+nav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+#page {
+  overflow:hidden;
+  white-space:nowrap;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#CCC;
+  display:flex;
+  flex-wrap:no-wrap;
+}
+.pane {
+  flex:0 0 100vw;
+  height:100vh;
+  display:flex;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-color: #44ce97;
+}
+
+.pane:nth-child(4n+2)  {
+  background-color: #6b7381;;
+}
+.pane:nth-child(4n+3)  {
+  background-color: #6df2bc;
+}
+.pane:nth-child(4n+4)  {
+  background-color: #9ca3a0;
+}
+
+.arrow {
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 4vw;
+    line-height: 40px;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100%  { -webkit-transform: translateX(0) rotate(-90deg); }
+    40%  { -webkit-transform: translateX(20px) rotate(-90deg); }
+	80% { -webkit-transform: translateX(10px) rotate(-90deg); }
+}
+
+h1{
+  font-size:11vw;
+}
+
+h4{
+  font-size:4vw;
+}
+
+h3{
+  font-size:5.4vw;
+  text-align: center;
+}
+h6{
+  font-size:3vw;
+  text-align: center;
+}
+
+b{
+  font-size:3vw;
+  text-align: center;
+}
+
+p{
+  font-size:1.5vw;
+  text-align: center;
+  
+}
+
+#dome{
+  background: url("https://image.ibb.co/c6kR4G/dome.png");
+  background-size: cover;
+}
+
+
+#map{
+  background: url("https://image.ibb.co/bPcsBw/Screen_Shot_2018_01_22_at_6_25_46_PM.png");
+  background-size: cover;
+}
+
+
+
+@-webkit-keyframes flap-r {
+  0%,10%   { 	border-top-width: 60px; }
+  40%,60%  { 	border-top-width: 10px; }
+  100%     { 	border-top-width: 60px; }
+}
+
+@-webkit-keyframes flap-l {
+  0%       { 	border-bottom-width: 0px; }
+  40%,60%  { 	border-bottom-width: 40px; }
+  100%     { 	border-bottom-width: 0px; }
+}
+
+@-webkit-keyframes fly {
+  0%   { 	left: 0%; top:100px;-webkit-transform:scale3d(0.5,0.5,1) }
+  100% { 	left: 100%; top:100px; -webkit-transform:scale3d(1,1,1) }
+}
+
+@-webkit-keyframes bob {
+  0%   { 	top: 25px; }
+  50%   { 	top: 0px; }
+  100% { 	top: 25px; }
+}
+
+#pictureframe {
+  position:relative;
+  width:100px;
+  margin-top:0px;
+  -webkit-animation: fly 7s infinite linear;
+}
+
+#shadow {
+  position:absolute;
+  width: 0px; height: 0px; 
+  top: 140px; left: 00px;
+  border-width: 10px;
+  border-left-width:50px;
+  border-top-width:0px;
+  border-right-width: 40px;
+  border-color: transparent;
+  border-bottom-color: rgba(210,210,210,0.6);
+  border-style:solid;
+  -webkit-filter: blur(5px);
+}
+
+#shadow:after {
+  content: " ";
+  position:absolute;
+  width: 00px; height: 0px; 
+  top: 10px; left: -50px;
+  border-width: 10px;
+  border-left-width:50px;
+  border-bottom-width:0px;
+  border-right-width: 40px;
+  border-color: transparent;
+  border-top-color: rgba(210,210,210,0.6);
+  border-style:solid;
+}
+
+#bird div {
+  position:absolute;
+}
+
+#bird { 
+  position:absolute;
+  -webkit-animation: bob 2s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4);
+ }
+
+
+#body1,#body2,#wing-l,#wing-r {
+  	width: 0px; height: 0px;
+    border-color: transparent;
+    border-style: solid;
+}
+#body1 {
+	border-width: 15px; 
+  border-left-width:25px;
+  border-top-width:15px;
+  border-right-width: 55px;
+  border-top-color: #333;
+}
+
+#body2 { 
+  left: 50px; bottom: 0px;
+	border-width: 10px; 
+  border-left-width:5px;
+  border-top-width:0px;
+  border-right-width: 15px;
+  border-bottom-color: #777;
+}
+
+#wing-l {
+  left: 22px; bottom: 0px; 
+	border-width: 60px; 
+  border-left-width:20px;
+  border-top-width:0px;
+  border-right-width: 6px;
+  border-bottom-color: #444;
+  -webkit-animation: flap-l 2s infinite; 
+}
+
+#wing-r {
+  left: 22px; top:0px;
+	border-width: 60px; 
+  border-left-width:20px;
+  border-bottom-width:0px;
+  border-right-width: 6px;
+  border-top-color: #777;
+  -webkit-animation: flap-r 2s infinite; 
+}
+
+
+#Vulture{
+	font-size: 40px;
+  font-family: 'Bree Serif', serif;
+	padding-left: 8px;
+	margin-bottom: 10px;
+}
+
+
+.container{
+	position: relative;
+	padding-top: 20px;
+	max-width: 5040px;
+}
+
+.containercenter{
+	margin: auto;
+	position: relative;
+	width: 50%;
+	padding-top: 20px;
+}
+
+
+.navbar{
+	position: relative;
+  z-index:100;
+}
+
+.card{
+	margin-bottom:25px;
+}
+
+#currentcardtitle{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.currentcard-text{
+	font-size: 18px;
+}
+
+.nav-link{
+	font-size: 25px;
+}
+
+.navleft{
+	padding-left: 10px;
+}
+
+@media screen and (min-width: 699px) and (min-width: 520px) {
+    .brandlogo {
+        float:left;
+    }
+}
+
+#location-button{
+  margin-bottom: 12px;
+}
+
+
+
+.btn-success{
+  background-color: #44ce97;
+  position: absolute;
+  height:60%;
+  right:10px;
+  border-radius: 100px;
+
+}
+
+
+.postbutton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-submit{
+  color: white;
+  background-color: #44ce97;
+  position: absolute;
+}
+
+.btn-success:hover{
+  border-color: white;
+  background:#44ce97;
+}
+
+#table-body{
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+#angela{
+  position: absolute;
+  
+  width: 308px;
+  height: 308px;
+  background: url("https://image.ibb.co/j5ZnWw/21272873_3830039233450_4046663.jpg");
+  border-radius: 1000px;
+}
+
+@media only screen and (max-width: 700px) {
+    #angela{
+      transform: scale(.5) translateX(-150px);
+    }
+
+    #linnea{
+      transform: scale(.5) translateX(-300px);
+    }
+}
+
+#linnea{
+  width: 308px;
+  height: 308px;
+  background: url("https://image.ibb.co/dQH7Ww/25075201_1987830511473918_3037.jpg");
+  border-radius: 1000px;
+}
+
+
+
+.btn-submit{
+  color: white;
+  background-color: #44ce97;
+  position: absolute;
+}
+
+.activee:hover{
+  border-color: white;
+  background:#44ce97;
+}
+
+
+
+.btn-outline-success:hover{
+  background:#44ce97;
+}
+
+.nav-item .navbarDiv{
+  position: relative;
+  float:right;
+}
+
+
+
+.btn-outline-success{
+  color: #44ce97;
+  border-color: #44ce97;
+}
+
+.btn-success{
+  background-color: #44ce97;
+  position: absolute;
+  height:60%;
+  right:10px;
+  border-radius: 100px;
+}
+
+

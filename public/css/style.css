@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Vulture homepage */
+#map {
+  height: 80vh;
+  width:100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#Vulture{
+	font-size: 40px;
+	font-family: 'Bree Serif', serif;
+	padding-left: 8px;
+	margin-bottom: 10px;
+}
+
+#reportBtn{
+  display: block;
+}
+
+#foodphotooncard{
+  position: relative;
+  height:150px;
+  width:150px;
+}
+
+.imagge{
+  height:150px;
+  width:150px;
+  margin-bottom:12px;
+}
+
+.imagge:hover {
+  background-size: 150px 150px;
+  background-image: url('https://image.freepik.com/free-icon/expand-tool-arrows-in-a-square_318-26589.jpg');
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+
+#foodphotooncard:hover{opacity: .2;}
+
+.container{
+	position: relative;
+	padding-top: 20px;
+	max-width: 5040px;
+}
+
+.containercenter{
+  max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+/*	width: 50%;*/
+	padding-top: 20px;
+}
+
+.navbar{
+	position: relative;
+}
+
+.card{
+	margin-bottom:25px;
+}
+
+#currentcardtitle{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.currentcard-text{
+	font-size: 18px;
+}
+
+.nav-link{
+	font-size: 25px;
+}
+
+.navleft{
+	padding-left: 10px;
+}
+
+@media screen and (min-width: 699px) and (min-width: 520px) {
+    .brandlogo {
+        float:left;
+    }
+}
+
+#location-button{
+  margin-bottom: 12px;
+}
+
+
+
+.btn-outline-success{
+  color: #44ce97;
+  border-color: #44ce97;
+}
+
+.btn-success{
+  background-color: #44ce97;
+  position: absolute;
+  height:60%;
+  right:10px;
+  border-radius: 100px;
+}
+
+.postbutton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-submit{
+  color: white;
+  background-color: #44ce97;
+  position: absolute;
+}
+
+.activee:hover{
+  border-color: white;
+  background:#44ce97;
+}
+
+
+
+.btn-outline-success:hover{
+  background:#44ce97;
+}
+
+.nav-item .navbarDiv{
+	position: relative;
+	float:right;
+}
+
+
+
+
+/* LIST CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding-left: 20px;
+}
+
+tbody{
+  cursor: pointer;
+}
+
+th-vendor{
+  cursor: default;
+}
+
+th-quantity{
+  cursor: default;
+}
+
+th-room{
+  cursor: default;
+}
+
+th-building{
+  cursor: default;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+table th,
+table td {
+    padding-left: 12px ;
+  padding-top:10px;
+  padding-bottom:10px;
+    text-align: left;
+  border-left: ;
+}
+
+table th {
+    padding-bottom: 10px;
+    padding-top:10px;
+    background-color: #44ce97;
+    position: relative;
+    cursor: pointer;
+    color: #f2fbfa;
+}
+table th:after {
+    content: "";
+    display: none;
+    width: 0;
+    height: 0;
+    margin-top: -5px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #efeeee;
+}
+.up,
+.down{
+  position: relative;
+}
+.up:before,
+.down:before{
+  content:"";
+  position: absolute; 
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top:5px;
+  margin-left:5px;
+}
+.up:before{
+  border-bottom: 5px solid white;
+}
+.down:before{
+  border-top: 5px solid white;
+}
+.filter-table{
+  padding-bottom: 10px;
+}
+.filter-table input{
+  width: 100%;
+  padding: 10px;
+}
+
+.row{
+  /*overflow-y: scroll;*/
+  margin-left:0px;
+  margin-right:-0px;
+}
+
+strong{
+  font-weight: bold;
+}
+
+.table-responsive{
+  max-height: 43vh;
+  overflow-y: scroll;
+  /*border: 1px solid #ccc;*/
+}
+
+.rowrowrow{
+  display: flex;  /* make the row a flex container */
+  align-items: center;
+  height:80vh;
+}
+
+
+
+
+.large-profile-container {
+  padding: 0 35%;
+}
+
+/*Toggle button*/
+/*.btn-toggle {
+  margin: 0 4rem;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+  color: #6b7381;
+  background: #bdc1c8;
+}
+.btn-toggle:focus,
+.btn-toggle.focus,
+.btn-toggle:focus.active,
+.btn-toggle.focus.active {
+  outline: none;
+}
+.btn-toggle:before,
+.btn-toggle:after {
+  line-height: 1.5rem;
+  width: 4rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity .25s;
+}
+.btn-toggle:before {
+  content: 'Off';
+  left: -4rem;
+}
+.btn-toggle:after {
+  content: 'On';
+  right: -4rem;
+  opacity: .5;
+}
+.btn-toggle > .handle {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 1.125rem;
+  background: #fff;
+  transition: left .25s;
+}
+.btn-toggle.active {
+  transition: background-color 0.25s;
+}
+.btn-toggle.active > .handle {
+  left: 1.6875rem;
+  transition: left .25s;
+}
+.btn-toggle.active:before {
+  opacity: .5;
+}
+.btn-toggle.active:after {
+  opacity: 1;
+}
+
+.btn-toggle:before,
+.btn-toggle:after {
+  color: #6b7381;
+}
+.btn-toggle.active {
+  background-color: #29b5a8;
+}
+*/
+
+#table-body{
+  height:100px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+th{
+  position: fixed;
+}
+
+/*.foodRow{
+  overflow-x: scroll;
+}*/
+
+.upload{
+  margin: 15px;

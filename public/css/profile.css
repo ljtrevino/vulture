@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #44ce97;
+    color: white;
+
+}
+
+h1{
+	font-family: 'Bree Serif', serif;
+	font-size: 5vw;
+	
+}
+
+h2{
+	font-size: 2vw;
+	
+}
+
+@media all and (max-width: 500px){
+h1{
+	font-family: 'Bree Serif', serif;
+	font-size: 8vw;
+	/*text-align: center;*/
+	
+}
+
+h2{
+	font-size: 4vw;
+	/*text-align: center;*/
+	
+}
+
+#pictureframe {
+  position:relative;
+  float:right;
+  width:80px;
+  margin-top:0px;
+  -webkit-animation: myOrbit 7s infinite linear;
+
+}
+
+#pictureframe2{
+	visibility: hidden;
+}
+}
+
+@media (max-width:1000px) and (min-width:500px) {
+#pictureframe #pictureframe2{
+	visibility: hidden;
+}}
+
+.circle-avatar{
+width:80%;
+  height:auto;
+  display:block;
+  /* div height to be the same as width*/
+  padding-top:80%;
+
+  /* make it a circle */
+  border-radius:50%;
+
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  /* it makes the clue thing, takes smaller dimension to fill div */
+  background-size: cover;
+
+  /* it is optional, for making this div centered in parent*/
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	z-index: -10;
+}
+
+.card-body{
+	background: #353A3E;
+	margin: 1vw;
+	border-radius: 10px;
+	color: white;
+}
+
+.btn-primary{
+	background: #44ce97;
+	border: white;
+}
+
+.btn-primary:hover{
+	background: white;
+	border: #44ce97;
+	color: #44ce97
+}
+
+#activepost{
+	font-family: 'Bree Serif', serif;
+
+}
+
+
+#pictureframe{
+	visibility: visible;
+	z-index:100;
+	position:relative;
+  width:80px;
+  -webkit-animation: myOrbit 7s infinite linear;
+  transform: translate(-100px);
+}
+
+
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg) translateX(10%) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(10%) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+    from { -moz-transform: rotate(0deg) translateX(10%) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(10%) rotate(-360deg); }
+}
+
+@-o-keyframes myOrbit {
+    from { -o-transform: rotate(0deg) translateX(10%) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(10%) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(10%) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(10%) rotate(-360deg); }
+}
+
+@-webkit-keyframes flap-r {
+  0%,10%   { 	border-top-width: 60px; }
+  40%,60%  { 	border-top-width: 10px; }
+  100%     { 	border-top-width: 60px; }
+}
+
+@-webkit-keyframes flap-l {
+  0%       { 	border-bottom-width: 0px; }
+  40%,60%  { 	border-bottom-width: 40px; }
+  100%     { 	border-bottom-width: 0px; }
+}
+
+@-webkit-keyframes fly {
+  0%   { 	left: 0%; top:40px;-webkit-transform:scale3d(0.5,0.5,1) }
+  100% { 	left: 100%; top:40px; -webkit-transform:scale3d(1,1,1) }
+}
+
+@-webkit-keyframes bob {
+  0%   { 	top: 25px; }
+  50%   { 	top: 0px; }
+  100% { 	top: 25px; }
+}
+
+#pictureframe2 {
+  position:relative;
+  width:80px;
+  -webkit-animation: fly 10s infinite linear;
+  transform: translate(-100px);
+
+}
+
+#pictureframe {visibility: hidden;}
+
+#bird div {
+  position:absolute;
+}
+
+#bird { 
+  position:absolute;
+  -webkit-animation: bob 2s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4);
+ }
+
+
+#body1,#body2,#wing-l,#wing-r {
+  	width: 0px; height: 0px;
+    border-color: transparent;
+    border-style: solid;
+}
+#body1 {
+	border-width: 15px; 
+  border-left-width:25px;
+  border-top-width:15px;
+  border-right-width: 55px;
+  border-top-color: #333;
+}
+
+#body2 { 
+  left: 50px; bottom: 0px;
+	border-width: 10px; 
+  border-left-width:5px;
+  border-top-width:0px;
+  border-right-width: 15px;
+  border-bottom-color: #777;
+}
+
+#wing-l {
+  left: 22px; bottom: 0px; 
+	border-width: 60px; 
+  border-left-width:20px;
+  border-top-width:0px;
+  border-right-width: 6px;
+  border-bottom-color: #444;
+  -webkit-animation: flap-l 2s infinite; 
+}
+
+#wing-r {
+  left: 22px; top:0px;
+	border-width: 60px; 
+  border-left-width:20px;
+  border-bottom-width:0px;
+  border-right-width: 6px;
+  border-top-color: #777;
+  -webkit-animation: flap-r 2s infinite; 
+}
